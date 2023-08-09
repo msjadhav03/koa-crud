@@ -4,6 +4,15 @@
 - Designed by Express team
 - Efficient to handle more request than Express
 
+## Installing Koa
+```
+npm i --save --global koa
+```
+## Initalizing Koa Package
+```
+npm init -y
+```
+
 ## Simple Koa Server
 ```
 const Koa = require('koa);
