@@ -94,7 +94,7 @@ app.listen(PORT)
 console.log(`Server is running on ${PORT}`)
 ```
 
-### Routing for PATCH
+### Routing for PATCH METHOD
 ```
 const Koa = require('koa);
 const app = new Koa()
@@ -125,7 +125,7 @@ console.log(`Server is running on ${PORT}`)
 
 ```
 
-### Routing for POST
+### Routing for POST METHOD
 ```
 const Koa = require('koa);
 const app = new Koa()
