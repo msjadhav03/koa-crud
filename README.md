@@ -6,7 +6,7 @@
 
 ## Installing Koa
 ```
-npm i --save --global koa
+npm i --save koa
 ```
 ## Initalizing Koa Package
 ```
