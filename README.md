@@ -15,8 +15,9 @@ console.log(`Server is running on ${PORT}`)
 
 ## Routing
 
+### Installing router package
 ```
-npm i -save koa-router
+npm i --save koa-router
 ```
 ### Routing for GET Method
 
@@ -29,6 +30,55 @@ const router = new Router()
 
 router.get('/',ctx =>{
     ctx.body = "Welcome to Koa App"
+})
+
+app.listen(PORT)
+console.log(`Server is running on ${PORT}`)
+```
+
+
+### Routing for GET BY id Method
+
+```
+const Koa = require('koa);
+const app = new Koa()
+const PORT = 4000
+const Router = require('koa-router')
+const router = new Router()
+const data = [
+    {
+        "id" : "1",
+        "breed" : "Siberian Husky"
+    }
+]
+router.get('/:id',ctx =>{
+    ctx.body = data.find( element => element.id === ctx.request.params)
+})
+
+app.listen(PORT)
+console.log(`Server is running on ${PORT}`)
+```
+
+
+### Routing for DELETE BY id Method
+
+```
+const Koa = require('koa);
+const app = new Koa()
+const PORT = 4000
+const Router = require('koa-router')
+const router = new Router()
+const data = [
+    {
+        "id" : "1",
+        "breed" : "Siberian Husky"
+    }
+]
+router.delete('/:id',ctx =>{
+    const element = data.find( element => element.id === ctx.request.params)
+    data.remove(element)
+    ctx.status = 200
+    ctx.body = element
 })
 
 app.listen(PORT)
